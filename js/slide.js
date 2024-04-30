@@ -9,16 +9,15 @@ export default class Slide {
 		this.wrapper.addEventListener('mousemove', this.onMove);
 	}
 
-	onMove(event) {
-
-	}
-
 	onEnd(event) {
-
 		this.wrapper.removeEventListener('mousemove', this.onMove);
 	}
 
-	addSlideEvents() {
+	onMove(event) {
+		
+	}
+
+	addEventsSlide() {
 		this.wrapper.addEventListener('mousedown', this.onStart);
 		this.wrapper.addEventListener('mouseup', this.onEnd);
 	}
@@ -31,7 +30,7 @@ export default class Slide {
 
 	init() {
 		this.bindEvents();
-		this.addSlideEvents();
+		this.addEventsSlide();
 		return this;
 	}
 }
